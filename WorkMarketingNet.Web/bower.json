@@ -1,0 +1,12 @@
+{
+  "name": "WorkMarketingNet.Web",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#master",
+    "polymer-core-elements": "Polymer/core-elements#master",
+    "polymer-paper-elements": "Polymer/paper-elements#master"
+  },
+  "resolutions": {
+    "webcomponentsjs": "^0.7.0"
+  }
+}
