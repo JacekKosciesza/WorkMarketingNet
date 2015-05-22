@@ -7,10 +7,9 @@
       "Microsoft.AspNet.Server.WebListener >= 1.0.0-beta4",
       "Microsoft.AspNet.StaticFiles >= 1.0.0-beta4",
       "Microsoft.AspNet.Mvc >= 6.0.0-beta4",
-      "Microsoft.Framework.Logging >= 1.0.0-beta4",
-      "Microsoft.Framework.Logging.Console >= 1.0.0-beta4",
       "WorkMarketingNet.Localization.Core ",
-      "WorkMarketingNet.Localization.Data "
+      "WorkMarketingNet.Localization.Data ",
+      "WorkMarketingNet.Logging.Core >= 1.0.0-*"
     ],
     "DNX,Version=v4.5.1": [],
     "DNXCore,Version=v5.0": []

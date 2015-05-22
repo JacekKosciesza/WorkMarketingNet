@@ -22,6 +22,10 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WorkMarketingNet.Localizati
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WorkMarketingNet.Localization.Tests.Integration", "Localization\Tests\WorkMarketingNet.Localization.Tests.Integration\WorkMarketingNet.Localization.Tests.Integration.xproj", "{85B9DCFB-11BA-44C3-B10D-CE2A8CF20D60}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{EE983764-0958-4AB1-96D4-16DC709397A3}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WorkMarketingNet.Logging.Core", "Logging\WorkMarketingNet.Logging.Core\WorkMarketingNet.Logging.Core.xproj", "{BD680C02-C64C-43D4-ADB9-4E33C9C5285C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +52,10 @@ Global
 		{85B9DCFB-11BA-44C3-B10D-CE2A8CF20D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85B9DCFB-11BA-44C3-B10D-CE2A8CF20D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85B9DCFB-11BA-44C3-B10D-CE2A8CF20D60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD680C02-C64C-43D4-ADB9-4E33C9C5285C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD680C02-C64C-43D4-ADB9-4E33C9C5285C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD680C02-C64C-43D4-ADB9-4E33C9C5285C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD680C02-C64C-43D4-ADB9-4E33C9C5285C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,5 +66,6 @@ Global
 		{7A8DF037-4175-43E4-A79E-6A5820FD0F8D} = {3F2850D7-F712-4CFC-9655-A13F62FF7948}
 		{02E912B1-49CA-4811-8414-8CC3E77B76F7} = {7A8DF037-4175-43E4-A79E-6A5820FD0F8D}
 		{85B9DCFB-11BA-44C3-B10D-CE2A8CF20D60} = {7A8DF037-4175-43E4-A79E-6A5820FD0F8D}
+		{BD680C02-C64C-43D4-ADB9-4E33C9C5285C} = {EE983764-0958-4AB1-96D4-16DC709397A3}
 	EndGlobalSection
 EndGlobal

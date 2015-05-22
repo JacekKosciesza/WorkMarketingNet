@@ -3,6 +3,7 @@ using Microsoft.Framework.DependencyInjection;
 using Microsoft.Framework.Logging;
 using WorkMarketingNet.Localization.Core;
 using WorkMarketingNet.Localization.Data;
+using WorkMarketingNet.Logging.Core;
 
 namespace WorkMarketingNet.Web
 {
@@ -18,14 +19,12 @@ namespace WorkMarketingNet.Web
 			services.AddSingleton<ILocalizationService, LocalizationService>();
 			services.AddSingleton<IGlobalizationService, GlobalizationService>();
 			services.AddSingleton<IDictionaryService, HardcodedDictionary>();
+			services.AddSingleton<Logging.Core.ILogger, Logger>();
 		}
 
-        public void Configure(IApplicationBuilder app, ILoggerFactory loggerfactory)
+        public void Configure(IApplicationBuilder app)
         {
-			// Configure the HTTP request pipeline.
-
-			// Add the console logger.
-			loggerfactory.AddConsole(minLevel: LogLevel.Warning);
+			// Configure the HTTP request pipeline.			
 
 			// Add static files to the request pipeline.
 			app.UseStaticFiles();
