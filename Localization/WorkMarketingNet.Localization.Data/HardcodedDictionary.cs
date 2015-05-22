@@ -12,6 +12,7 @@ namespace WorkMarketingNet.Localization.Data
 		private readonly Dictionary<Tuple<string, string>, string> _dictionary = new Dictionary<Tuple<string, string>, string>
 		{
 			{Tuple.Create("Settings", "pl-PL"), "Ustawienia"},
+			{Tuple.Create("Quotes", "pl-PL"), "Cytaty"}
 		};
 
 		public string Translate(string text, string culture)

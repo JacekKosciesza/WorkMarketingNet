@@ -4,6 +4,8 @@ using Microsoft.Framework.Logging;
 using WorkMarketingNet.Localization.Core;
 using WorkMarketingNet.Localization.Data;
 using WorkMarketingNet.Logging.Core;
+using WorkMarketingNet.Quotes.Core;
+using WorkMarketingNet.Quotes.Data.Repositories;
 
 namespace WorkMarketingNet.Web
 {
@@ -20,6 +22,7 @@ namespace WorkMarketingNet.Web
 			services.AddSingleton<IGlobalizationService, GlobalizationService>();
 			services.AddSingleton<IDictionaryService, HardcodedDictionary>();
 			services.AddSingleton<Logging.Core.ILogger, Logger>();
+			services.AddSingleton<IQuotesRepository, QuotesRepository>();
 		}
 
         public void Configure(IApplicationBuilder app)
