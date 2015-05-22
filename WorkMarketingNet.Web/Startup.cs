@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNet.Builder;
 using Microsoft.Framework.DependencyInjection;
 using Microsoft.Framework.Logging;
+using WorkMarketingNet.Localization.Core;
+using WorkMarketingNet.Localization.Data;
 
 namespace WorkMarketingNet.Web
 {
@@ -11,6 +13,11 @@ namespace WorkMarketingNet.Web
         {
 			// Add MVC services to the services container.
 			services.AddMvc();
+
+			// Dependency Injection
+			services.AddSingleton<ILocalizationService, LocalizationService>();
+			services.AddSingleton<IGlobalizationService, GlobalizationService>();
+			services.AddSingleton<IDictionaryService, HardcodedDictionary>();
 		}
 
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerfactory)

@@ -2,5 +2,12 @@
 	ViewBag.Title = "WorkMarketingNet";
 }
 
+@inject WorkMarketingNet.Localization.Core.ILocalizationService Localization
+
+@functions{
+	string T(string text, params object[] args) { return Localization.Translate(text, args); }
+}
+
 <h1>Home</h1>
 <core-icon icon="android"></core-icon>
+<h2>@T("Settings")</h2>
