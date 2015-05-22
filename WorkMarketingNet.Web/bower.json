@@ -2,11 +2,12 @@
   "name": "WorkMarketingNet.Web",
   "private": true,
   "dependencies": {
-    "polymer": "Polymer/polymer#master",
-    "polymer-core-elements": "Polymer/core-elements#master",
-    "polymer-paper-elements": "Polymer/paper-elements#master"
+    "polymer": "Polymer/polymer",
+    "polymer-core-elements": "Polymer/core-elements",
+    "polymer-paper-elements": "Polymer/paper-elements"
   },
   "resolutions": {
-    "webcomponentsjs": "^0.7.0"
+    "webcomponentsjs": "^0.7.0",
+    "polymer": "^0.5.0"
   }
 }
