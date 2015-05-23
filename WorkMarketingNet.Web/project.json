@@ -11,7 +11,7 @@
     "WorkMarketingNet.Localization.Data": "",
     "WorkMarketingNet.Logging.Core": "1.0.0-*",
     "WorkMarketingNet.Quotes.Core": "1.0.0-*",
-    "WorkMarketingNet.Quotes.Data": "1.0.0-*"
+    "WorkMarketingNet.Quotes.Data": "1.0.0-*"    
   },
 
   "commands": {

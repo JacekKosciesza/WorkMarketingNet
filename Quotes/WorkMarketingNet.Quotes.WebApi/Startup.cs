@@ -6,6 +6,10 @@ using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Http;
 using Microsoft.Framework.DependencyInjection;
+using WorkMarketingNet.Logging.Core;
+using WorkMarketingNet.Quotes.Core;
+using WorkMarketingNet.Quotes.Data.Repositories;
+using WorkMarketingNet.Quotes.Data.EntityFramework;
 
 namespace WorkMarketingNet.Quotes.WebApi
 {
@@ -19,6 +23,11 @@ namespace WorkMarketingNet.Quotes.WebApi
 		public void ConfigureServices(IServiceCollection services)
         {
 			services.AddMvc();
+
+			// Dependency Injection
+			services.AddSingleton<Logging.Core.ILogger, Logger>();
+			services.AddSingleton<IQuotesRepository, Data.EntityFramework.QuotesRepository>();
+			services.AddSingleton<QuotesContext>();
 		}
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

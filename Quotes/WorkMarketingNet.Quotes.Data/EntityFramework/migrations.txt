@@ -1,0 +1,11 @@
+﻿http://www.bricelam.net/2014/09/14/migrations-on-k.html
+https://github.com/aspnet/EntityFramework/wiki/Using-EF7-in-Traditional-.NET-Applications
+https://github.com/aspnet/DNX
+
+dnvm list
+dnvm use default
+cd D:\GitHub\WorkMarketingNet\Quotes\WorkMarketingNet.Quotes.Data
+dnu restore
+dnx . ef
+dnx . ef migration add Initial
+dnx . ef migration apply

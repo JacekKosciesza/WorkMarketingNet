@@ -5,6 +5,7 @@ using WorkMarketingNet.Localization.Core;
 using WorkMarketingNet.Localization.Data;
 using WorkMarketingNet.Logging.Core;
 using WorkMarketingNet.Quotes.Core;
+using WorkMarketingNet.Quotes.Data.EntityFramework;
 using WorkMarketingNet.Quotes.Data.Repositories;
 
 namespace WorkMarketingNet.Web
@@ -22,7 +23,8 @@ namespace WorkMarketingNet.Web
 			services.AddSingleton<IGlobalizationService, GlobalizationService>();
 			services.AddSingleton<IDictionaryService, HardcodedDictionary>();
 			services.AddSingleton<Logging.Core.ILogger, Logger>();
-			services.AddSingleton<IQuotesRepository, QuotesRepository>();
+			services.AddSingleton<IQuotesRepository, Quotes.Data.EntityFramework.QuotesRepository>();
+			services.AddSingleton<QuotesContext>();
 		}
 
         public void Configure(IApplicationBuilder app)
