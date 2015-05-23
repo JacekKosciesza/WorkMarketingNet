@@ -1,13 +1,16 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en"> @*TODO: dynamicaly changed*@
 <head>
 	<title>@ViewBag.Title</title>
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
 	<script src="/lib/webcomponentsjs/webcomponents.js"></script>
-	<link rel="import" href="/lib/core-icons/core-icons.html" />
+	@*<link rel="import" href="/lib/core-icons/core-icons.html" />*@
+	<link rel="import" href="/lib/elements/elements.html">
 	@RenderSection("styles", false)
 </head>
-<body>
+<body fullbleed fit layout vertical>
 	@RenderBody()
 	@RenderSection("scripts", false)
 </body>

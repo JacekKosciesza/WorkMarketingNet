@@ -4,7 +4,9 @@
   "dependencies": {
     "polymer": "Polymer/polymer",
     "polymer-core-elements": "Polymer/core-elements",
-    "polymer-paper-elements": "Polymer/paper-elements"
+    "polymer-paper-elements": "Polymer/paper-elements",
+    "faker": "Marak/faker.js",
+    "more-routing": "PolymerLabs/more-routing#^0.5"
   },
   "resolutions": {
     "webcomponentsjs": "^0.7.0",
