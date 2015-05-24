@@ -7,6 +7,10 @@ using WorkMarketingNet.Logging.Core;
 using WorkMarketingNet.Quotes.Core;
 using WorkMarketingNet.Quotes.Data.EntityFramework;
 using WorkMarketingNet.Quotes.Data.Repositories;
+using Microsoft.AspNet.Mvc;
+using Microsoft.AspNet.Mvc.Razor;
+using System;
+using WorkMarketingNet.Web.Localization;
 
 namespace WorkMarketingNet.Web
 {
@@ -16,9 +20,15 @@ namespace WorkMarketingNet.Web
         public void ConfigureServices(IServiceCollection services)
         {
 			// Add MVC services to the services container.
-			services.AddMvc();
+            services.AddMvc().Configure<MvcOptions>(options =>
+			{
+				options.ViewEngines.Clear();
+				options.ViewEngines.Add(typeof(LocalizedRazorViewEngine));
+				//options.ViewEngines.Add(typeof(RazorViewEngine));
+			});
 
 			// Dependency Injection
+			//services.AddScoped<IRazorPageFactory, LocalizedVirtualPathRazorPageFactory>();
 			services.AddSingleton<ILocalizationService, LocalizationService>();
 			services.AddSingleton<IGlobalizationService, GlobalizationService>();
 			services.AddSingleton<IDictionaryService, HardcodedDictionary>();

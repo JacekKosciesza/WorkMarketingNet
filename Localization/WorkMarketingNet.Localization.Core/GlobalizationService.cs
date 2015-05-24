@@ -11,7 +11,9 @@ namespace WorkMarketingNet.Localization.Core
 		{
 			get
 			{
-				return "pl-PL"; // CultureInfo.CurrentCulture.ToString();
+				// CultureInfo.CurrentCulture.ToString();
+				//return "en-US";
+				return "pl-PL"; 
 			}
 		}
 	}

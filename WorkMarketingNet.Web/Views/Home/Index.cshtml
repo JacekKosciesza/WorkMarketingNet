@@ -1,5 +1,5 @@
 ﻿@{
-	ViewBag.Title = "WorkMarketingNet";
+	ViewBag.Title = T("WEBSITE_NAME");
 }
 
 @inject WorkMarketingNet.Localization.Core.ILocalizationService Localization
@@ -7,10 +7,6 @@
 @functions{
 	string T(string text, params object[] args) { return Localization.Translate(text, args); }
 }
-
-@*<h1>Home</h1>
-	<core-icon icon="android"></core-icon>
-	<h2>@T("Settings")</h2>*@
 
 @section styles {
 	<style>
@@ -46,6 +42,9 @@
 				<core-item label="Contact" route="contact">
 					<a href="{{urlFor('contact')}}"></a>
 				</core-item>
+				<core-item label="@T("Quotes")" route="quotes">
+					<a href="{{urlFor('quotes')}}"></a>
+				</core-item>
 			</core-menu>
 		</core-header-panel>
 		<core-header-panel main>
@@ -80,6 +79,9 @@
 						<section route="contact">
 							<h1>Contact</h1>
 							<div>Contact content</div>
+						</section>
+						<section route="quotes">
+							<h1>@T("Quotes")</h1>
 						</section>
 					</core-pages>
 				</more-route-selector>

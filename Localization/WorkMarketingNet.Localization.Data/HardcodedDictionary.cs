@@ -11,6 +11,9 @@ namespace WorkMarketingNet.Localization.Data
     {
 		private readonly Dictionary<Tuple<string, string>, string> _dictionary = new Dictionary<Tuple<string, string>, string>
 		{
+			{Tuple.Create("WEBSITE_NAME", "en-US"), "WorkMarketingNet"},
+			{Tuple.Create("WEBSITE_NAME", "pl-PL"), "WorkMarketingNet"},
+			
 			{Tuple.Create("Settings", "pl-PL"), "Ustawienia"},
 			{Tuple.Create("Quotes", "pl-PL"), "Cytaty"}
 		};
