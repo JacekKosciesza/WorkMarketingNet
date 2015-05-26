@@ -13,9 +13,18 @@ namespace WorkMarketingNet.Localization.Data
 		{
 			{Tuple.Create("WEBSITE_NAME", "en-US"), "WorkMarketingNet"},
 			{Tuple.Create("WEBSITE_NAME", "pl-PL"), "WorkMarketingNet"},
-			
+									
+			{Tuple.Create("Dashboard", "pl-PL"), "Kokpit"},
+			{Tuple.Create("Companies", "pl-PL"), "Firmy"},
+			{Tuple.Create("Contacts", "pl-PL"), "Kontakty"},
+			{Tuple.Create("Books", "pl-PL"), "Książki"},
+			{Tuple.Create("Videos", "pl-PL"), "Filmy"},
+			{Tuple.Create("Website", "pl-PL"), "Strona"},
+			{Tuple.Create("Events", "pl-PL"), "Wydarzenia"},
+			{Tuple.Create("Users", "pl-PL"), "Użytkownicy"},
+			{Tuple.Create("Quotes", "pl-PL"), "Cytaty"},
+
 			{Tuple.Create("Settings", "pl-PL"), "Ustawienia"},
-			{Tuple.Create("Quotes", "pl-PL"), "Cytaty"}
 		};
 
 		public string Translate(string text, string culture)

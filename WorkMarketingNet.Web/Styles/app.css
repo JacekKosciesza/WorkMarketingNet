@@ -27,3 +27,15 @@ core-list .avatar {
 	margin-right: 16px;
 	background-color: #00bcd4;
 }
+
+.logo {
+	text-decoration: none;
+}
+
+.logo > .work, .logo > .net {
+	color:white;
+}
+
+.logo > .marketing {
+	color:red;
+}

@@ -26,3 +26,21 @@ function generateContacts() {
 	}
 	return data;
 }
+
+tmpl.keyHandler = function (e, detail, sender) {
+	var pages = document.querySelector('#pages');
+
+	switch (detail.key) {
+		case 'left':
+		case 'up':
+			pages.selectPrevious();
+			break;
+		case 'right':
+		case 'down':
+			pages.selectNext();
+			break;
+		case 'space':
+			detail.shift ? pages.selectPrevious() : pages.selectNext();
+			break;
+	}
+};

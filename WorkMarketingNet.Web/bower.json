@@ -6,7 +6,11 @@
     "polymer-core-elements": "Polymer/core-elements",
     "polymer-paper-elements": "Polymer/paper-elements",
     "faker": "Marak/faker.js",
-    "more-routing": "PolymerLabs/more-routing#^0.5"
+    "more-routing": "PolymerLabs/more-routing#^0.5",
+    "youtube": "GoogleWebComponents/google-youtube#1.0.5",
+    "google-apis": "0.4.4",
+    "google-map": "0.4.2",
+    "google-chart": "0.2.1"
   },
   "resolutions": {
     "webcomponentsjs": "^0.7.0",

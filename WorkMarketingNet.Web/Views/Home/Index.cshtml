@@ -17,32 +17,63 @@
 		[drawer] {
 			background-color: #ffffff;
 		}
+
+		google-map {
+			display: block;
+			height: 400px;
+			width: 400px;
+		}
+		google-chart {
+			height: 300px;
+			width: 50em;
+		}
 	</style>
 	<link rel="stylesheet" href="/css/app.css">
 }
 
 <template is="auto-binding" id="tmpl">
+	<!-- Keyboard nav controller. -->
+	@*<core-a11y-keys id="keys" target="{{parentElement}}" keys="up down left right space space+shift" on-keys-pressed="{{keyHandler}}"></core-a11y-keys>*@
+
 	<core-drawer-panel id="drawerPanel">
 		<core-header-panel drawer>
 			<core-toolbar>
-				<a href="{{urlFor('home')}}">
+				<a href="{{urlFor('home')}}" class="logo" style="text-decoration:none; color:white;">
 					<paper-button>
 						<core-icon icon="custom-icons:fancy-circles"></core-icon>
-						WorkMarketingNet
+						<span class="work">Work</span><span class="marketing">Marketing</span><span class="net">Net</span>
 					</paper-button>
 				</a>
 			</core-toolbar>
 			<core-menu>
-				<core-item label="Home" route="home">
+				<core-item icon="home" label="@T("Dashboard")" route="home">
 					<a href="{{urlFor('home')}}"></a>
 				</core-item>
-				<core-item label="Portfolio" route="portfolio">
+				<core-item icon="communication:business" label="@T("Companies")" route="portfolio">
 					<a href="{{urlFor('users')}}"></a>
 				</core-item>
-				<core-item label="Contact" route="contact">
-					<a href="{{urlFor('contact')}}"></a>
+				<core-item icon="perm-contact-cal" label="@T("Contacts")" route="portfolio">
+					<a href="{{urlFor('users')}}"></a>
 				</core-item>
-				<core-item label="@T("Quotes")" route="quotes">
+				<core-item icon="av:my-library-books" label="@T("Books")" route="portfolio">
+					<a href="{{urlFor('users')}}"></a>
+				</core-item>
+				<core-item icon="av:video-collection" label="@T("Videos")" route="videos">
+					<a href="{{urlFor('videos')}}"></a>
+				</core-item>
+				<core-item icon="av:web" label="@T("Website")" route="portfolio">
+					<a href="{{urlFor('users')}}"></a>
+				</core-item>
+				<core-item icon="event" label="@T("Events")" route="events">
+					<a href="{{urlFor('events')}}></a>
+				</core-item>
+				<core-item icon="social:people" label="@T("Users")" route="portfolio">
+					<a href="{{urlFor('users')}}"></a>
+				</core-item>
+				@*<core-item label="Contact" route="contact">
+						<a href="{{urlFor('contact')}}"></a>
+					</core-item>*@
+				<core-item icon="editor:format-quote" label="@T("Quotes")" route="quotes">
 					<a href="{{urlFor('quotes')}}"></a>
 				</core-item>
 			</core-menu>
@@ -51,6 +82,8 @@
 			<core-toolbar>
 				<paper-icon-button icon="menu" core-drawer-toggle></paper-icon-button>
 				<div class="bottom indent">{{heading}}</div>
+				<paper-icon-button icon="search"></paper-icon-button>
+				@*<paper-icon-button icon="favorite" style="color: red;">Log in</paper-icon-button>*@
 			</core-toolbar>
 			<div class="content">
 				<more-route-selector selectedparams="{{params}}">
@@ -58,6 +91,10 @@
 						<section route="home">
 							<h1>Home</h1>
 							<div>Home content</div>
+							@*<google-chart type="pie"
+										  options="{'title': 'Distribution of days in 2001Q1''}"
+										 data='[["Month", "Days"], ["Jan", 31], ["Feb", 28], ["Mar", 31]]'>
+							</google-chart>*@
 						</section>
 						<section route="users">
 							<h1>Portfolio</h1>
@@ -82,6 +119,21 @@
 						</section>
 						<section route="quotes">
 							<h1>@T("Quotes")</h1>
+							<paper-fab icon="add" style="color: white;"></paper-fab>
+						</section>
+						<section route="videos">
+							<h1>@T("Videos")</h1>
+							<google-youtube videoid="twq8ovP9YX0"
+											height="270px"
+											width="480px"
+											rel="0"
+											start="5"
+											autoplay="0">
+							</google-youtube>
+						</section>
+						<section route="events">
+							<h1>@T("Events")</h1>
+							<google-map latitude="37.779" longitude="-122.3892"></google-map>
 						</section>
 					</core-pages>
 				</more-route-selector>
