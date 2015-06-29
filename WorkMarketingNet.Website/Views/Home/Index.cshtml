@@ -1,0 +1,36 @@
+﻿@{
+	ViewBag.Title = T("WEBSITE_NAME");
+}
+
+@inject WorkMarketingNet.Localization.Core.ILocalizationService Localization
+
+@functions{
+	string T(string text, params object[] args) { return Localization.Translate(text, args); }
+}
+
+<span id="browser-sync-binding"></span>
+<template is="dom-bind" id="app">
+
+	<paper-drawer-panel id="paperDrawerPanel">
+		@Html.Partial("_Menu")
+		<paper-header-panel main mode="waterfall-tall">
+
+			@Html.Partial("_Toolbar")
+
+			<!-- Main Content -->
+			<div class="content">
+				<iron-pages attr-for-selected="data-route" selected="{{route}}">
+					@Html.Partial("_Home")
+					@Html.Partial("_Users")
+					@Html.Partial("_UserInfo")
+					@Html.Partial("_Contact")
+				</iron-pages>
+			</div>
+		</paper-header-panel>
+	</paper-drawer-panel>
+	@Html.Partial("_ServiceWorker")
+</template>
+
+<!-- build:js scripts/app.js -->
+<script src="scripts/app.js"></script>
+<!-- endbuild-->

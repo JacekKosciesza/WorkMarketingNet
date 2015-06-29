@@ -56,6 +56,14 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.AspNet.Mvc.ModelB
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.AspNet.JsonPatch", "..\Mvc\src\Microsoft.AspNet.JsonPatch\Microsoft.AspNet.JsonPatch.xproj", "{4D55F4D8-633B-462F-A5B1-FEB84BD2D534}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WorkMarketingNet.Quotes.OData", "Quotes\WorkMarketingNet.Quotes.OData\WorkMarketingNet.Quotes.OData.xproj", "{B61324EC-793D-43C8-8916-19F07A414922}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.AspNet.OData", "..\WebApi\vNext\src\Microsoft.AspNet.OData\Microsoft.AspNet.OData.xproj", "{391207F8-D7ED-4233-BAD9-ABBFF700B71C}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.AspNet.Mvc.WebApiCompatShim", "..\Mvc\src\Microsoft.AspNet.Mvc.WebApiCompatShim\Microsoft.AspNet.Mvc.WebApiCompatShim.xproj", "{23D30B8C-04B1-4577-A604-ED27EA1E4A0E}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WorkMarketingNet.Website", "WorkMarketingNet.Website\WorkMarketingNet.Website.xproj", "{038E05B8-AF98-42F1-AB3F-1269C50DF0CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -138,6 +146,22 @@ Global
 		{4D55F4D8-633B-462F-A5B1-FEB84BD2D534}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D55F4D8-633B-462F-A5B1-FEB84BD2D534}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D55F4D8-633B-462F-A5B1-FEB84BD2D534}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B61324EC-793D-43C8-8916-19F07A414922}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B61324EC-793D-43C8-8916-19F07A414922}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B61324EC-793D-43C8-8916-19F07A414922}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B61324EC-793D-43C8-8916-19F07A414922}.Release|Any CPU.Build.0 = Release|Any CPU
+		{391207F8-D7ED-4233-BAD9-ABBFF700B71C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{391207F8-D7ED-4233-BAD9-ABBFF700B71C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{391207F8-D7ED-4233-BAD9-ABBFF700B71C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{391207F8-D7ED-4233-BAD9-ABBFF700B71C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23D30B8C-04B1-4577-A604-ED27EA1E4A0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23D30B8C-04B1-4577-A604-ED27EA1E4A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23D30B8C-04B1-4577-A604-ED27EA1E4A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23D30B8C-04B1-4577-A604-ED27EA1E4A0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{038E05B8-AF98-42F1-AB3F-1269C50DF0CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{038E05B8-AF98-42F1-AB3F-1269C50DF0CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{038E05B8-AF98-42F1-AB3F-1269C50DF0CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{038E05B8-AF98-42F1-AB3F-1269C50DF0CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -154,5 +178,6 @@ Global
 		{A4D33409-7170-468C-93BE-7E0F223B4A6C} = {C81E0694-ECEF-48B9-84FA-348261EE51F8}
 		{E784FEAD-B4CD-4C45-A122-512E08F2D197} = {317AB4BF-8FD9-4EF6-A252-B717475A4354}
 		{EE926B2A-4E85-4397-B1D7-FC4643AFE56A} = {317AB4BF-8FD9-4EF6-A252-B717475A4354}
+		{B61324EC-793D-43C8-8916-19F07A414922} = {C81E0694-ECEF-48B9-84FA-348261EE51F8}
 	EndGlobalSection
 EndGlobal

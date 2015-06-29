@@ -1,0 +1,22 @@
+﻿@inject WorkMarketingNet.Localization.Core.ILocalizationService Localization
+
+@functions{
+	string T(string text, params object[] args) { return Localization.Translate(text, args); }
+}
+
+<!-- Main Toolbar -->
+<paper-toolbar id="mainToolbar">
+	<paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+	<span class="flex"></span>
+
+	<!-- Toolbar icons -->
+	<paper-icon-button icon="refresh"></paper-icon-button>
+	<paper-icon-button icon="search"></paper-icon-button>
+
+	<!-- Application name -->
+	<div class="middle paper-font-display2 app-name">@T("WEBSITE_NAME")</div>
+
+	<!-- Application sub title -->
+	<div class="bottom title"></div>
+
+</paper-toolbar>
