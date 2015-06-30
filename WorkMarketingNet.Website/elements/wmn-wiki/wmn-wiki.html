@@ -1,0 +1,22 @@
+﻿<link rel="import" href="/bower_components/firebase-element/firebase-collection.html">
+
+<dom-module id="wmn-wiki">
+	<link rel="stylesheet" type="css" href="wmn-wiki.css">
+	<template>
+		<paper-fab icon="add"></paper-fab>
+		<firebase-collection data="{{data}}" location="https://fiery-fire-4147.firebaseio.com/wiki"></firebase-collection>
+		<template is="dom-repeat" items="{{data}}">
+			<paper-material elevation="1">
+				<h1><a href="{{url(item.slug)}}">{{item.title}}</a></h1>
+			</paper-material>
+		</template>
+	</template>
+	<script>
+		Polymer({
+			is: 'wmn-wiki',
+			url(slug) {
+				return "/wiki/" + slug;
+			}
+		});
+	</script>
+</dom-module>

@@ -1,0 +1,57 @@
+﻿<link rel="import" href="/bower_components/firebase-element/firebase-document.html">
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="/bower_components/paper-tabs/paper-tabs.html">
+
+<dom-module id="wmn-wiki-article">
+	<link rel="stylesheet" type="css" href="wmn-wiki-article.css">
+	<style>
+		/* CSS rules for your element */
+	</style>
+
+	<template>
+		<!-- local DOM for your element -->
+		<paper-material elevation="1">
+			<firebase-document location="{{location(title)}}"
+							   data="{{article}}"></firebase-document>
+			<!--<content></content>-->
+			<paper-tabs selected="{{selected}}">
+				<paper-tab>Article</paper-tab>
+				<paper-tab>Talk</paper-tab>
+			</paper-tabs>
+
+			<iron-pages selected="{{selected}}">
+				<div>
+					<h1>{{article.article}}</h1> <!--TODO: this is not nice article.article-->
+				</div>
+				<div>
+					<h1>Talk: <span>{{article.title}}</span></h1>
+				</div>
+			</iron-pages>
+		</paper-material>
+	</template>
+
+	<script>
+		// element registration
+		Polymer({
+			is: "wmn-wiki-article",
+
+			// add properties and methods on the element's prototype
+
+			properties: {
+				// declare properties for the element's public API
+				title: {
+					type: String,
+					notify: true // ???
+				},
+				selected: {
+					type: Number,
+					value: 0
+				}
+			},
+			location(slug) {
+				return "https://fiery-fire-4147.firebaseio.com/wiki/" + slug;
+			}
+		});
+	</script>
+
+</dom-module>

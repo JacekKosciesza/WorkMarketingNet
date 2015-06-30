@@ -1,0 +1,25 @@
+﻿<link rel="import" href="/bower_components/firebase-element/firebase-collection.html">
+
+<dom-module id="wmn-companies-list">
+	<link rel="stylesheet" type="css" href="wmn-companies-list.css">
+	<template>
+		<firebase-collection data="{{data}}" location="https://fiery-fire-4147.firebaseio.com/companies"></firebase-collection>
+		<template is="dom-repeat" items="{{data}}">
+			<paper-material elevation="1">
+				<h1><a href="{{url(item.slug)}}">{{item.name}}</a></h1>
+				<a href="{{item.website}}" rel="nofollow">{{item.website}}</a>
+				<iron-image style="width: 150px; height: 150px;" sizing="contain" src="{{item.logo.logomark}}"></iron-image>
+				<!--http://inkbotdesign.com/logotype-vs-logomark/-->
+			</paper-material>
+		</template>
+		<paper-fab icon="add" style="float: right;"></paper-fab>
+	</template>
+	<script>
+		Polymer({
+			is: 'wmn-companies-list',
+			url(slug) {
+				return "/companies/" + slug;
+			}
+		});
+	</script>
+</dom-module>

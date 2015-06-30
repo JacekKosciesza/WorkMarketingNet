@@ -1,0 +1,23 @@
+﻿<link rel="import" href="/bower_components/firebase-element/firebase-collection.html">
+<link rel="import" href="/elements/wmn-book/wmn-book.html">
+
+<dom-module id="wmn-books-library">
+	<link rel="stylesheet" type="css" href="wmn-books-library.css">
+	<template>
+		<paper-fab icon="add"></paper-fab>
+		<firebase-collection data="{{data}}" location="https://fiery-fire-4147.firebaseio.com/books"></firebase-collection>
+		<template is="dom-repeat" items="{{data}}">
+			<wmn-book>
+				<h1>{{item.title}}</h1>
+				<small>by <a href="people/{{item.author}}">{{item.author}}</a></small>
+				<iron-image style="width: 400px; height: 400px;" sizing="contain" src="{{item.image}}"></iron-image>
+			</wmn-book>
+		</template>
+
+	</template>
+	<script>
+    Polymer({
+    	is: 'wmn-books-library'
+    });
+	</script>
+</dom-module>

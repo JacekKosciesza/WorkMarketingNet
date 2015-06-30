@@ -19,17 +19,61 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       app.route = 'home';
     });
 
+    page('/companies', function () {
+    	app.route = 'companies';
+    });
+
+    page('/companies/:name', function (data) {
+    	app.route = 'company-details';
+    	app.params = data.params;
+    });
+
+    page('/people', function () {
+    	app.route = 'people';
+    });
+
+    page('/books', function () {
+    	app.route = 'books';
+    });
+
+    page('/videos', function () {
+    	app.route = 'videos';
+    });
+
+    page('/events', function () {
+    	app.route = 'events';
+    });
+
+    page('/quotes', function () {
+    	app.route = 'quotes';
+    });
+
+    page('/wiki', function () {
+    	app.route = 'wiki';
+    });
+
+    page('/wiki/:title', function (data) {
+    	app.route = 'wiki-article';
+    	app.params = data.params;
+    });
+
+  	// ---
+
+    page('/contact', function () {
+    	app.route = 'contact';
+    });
+
     page('/users', function () {
-      app.route = 'users';
+    	app.route = 'users';
     });
 
     page('/users/:name', function (data) {
-      app.route = 'user-info';
-      app.params = data.params;
+    	app.route = 'user-info';
+    	app.params = data.params;
     });
 
-    page('/contact', function () {
-      app.route = 'contact';
+    page('/website', function () {
+    	app.route = 'website';
     });
 
     // add #! before urls

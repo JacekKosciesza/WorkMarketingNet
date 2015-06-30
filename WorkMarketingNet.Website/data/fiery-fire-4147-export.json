@@ -1,0 +1,190 @@
+{
+  "books" : {
+    "978-0988667907" : {
+      "author" : "Eric Worre",
+      "image" : "/images/books/go-pro-by-eric-worre.jpg",
+      "title" : "Go Pro: 7 Steps to Becoming a Network Marketing Professional"
+    },
+    "978-1936677122" : {
+      "author" : "Jordan Adler",
+      "image" : "/images/books/beach-money-by-jordan-adler.jpg",
+      "title" : "Beach Money: Creating Your Dream Life Through Network Marketing"
+    },
+    "978-83-246-7308-7" : {
+      "author" : "Paweł Lenar",
+      "image" : "/images/books/mlm-profesjonalny-marketing-sieciowy.jpg",
+      "title" : "MLM profesjonalny marketing sieciowy"
+    },
+    "978-83-64437-02-1" : {
+      "author" : "Randy Gage",
+      "image" : "/images/books/multi-level-marketing-w-dzialaniu.jpg",
+      "title" : "Multi Level Marketing w działaniu"
+    }
+  },
+  "companies" : {
+    "JM Ocean Avenue" : {
+      "logo" : "/images/companies/jm-ocean-avenue-logo.png",
+      "name" : "JM Ocean Avenue",
+      "slug" : "jm-ocean-avenue",
+      "website" : "http://jmoceanavenue.com"
+    },
+    "MovaVie" : {
+      "logo" : "/images/companies/monavie-logo.png",
+      "name" : "MovaVie",
+      "website" : "http://www.monavie.com"
+    },
+    "XANGO" : {
+      "logo" : {
+        "default" : "/images/companies/xango-logo.png",
+        "logomark" : "/images/companies/xango-logomark.png",
+        "logotype" : "/images/companies/xango-logotype.png"
+      },
+      "name" : "XANGO",
+      "slug" : "xango",
+      "website" : "http://www.xango.com"
+    },
+    "jeunesse-global" : {
+      "logo" : {
+        "default" : "/images/companies/jeunesse-logo.png"
+      },
+      "name" : "Jeunesse Global",
+      "slug" : "jeunesse-global",
+      "translations" : {
+        "pl" : {
+          "name" : "Jeunesse Global"
+        }
+      },
+      "website" : "http://jeunesseglobal.com"
+    },
+    "monavie" : {
+      "logo" : "/images/companies/monavie-logo.png",
+      "name" : "MonaVie",
+      "slug" : "monavie",
+      "website" : "http://www.monavie.com"
+    }
+  },
+  "dictionary" : {
+    "pl" : {
+      "People" : "Ludzie"
+    }
+  },
+  "people" : {
+    "Aleksandra Kościesza" : {
+      "firstName" : "Aleksandra",
+      "lastName" : "Kościesza"
+    },
+    "Don Failla" : {
+      "firstName" : "Don",
+      "lastName" : "Failla"
+    },
+    "Eric Worre" : {
+      "firstName" : "Eric",
+      "lastName" : "Worre",
+      "photo" : "/images/people/eric-worre.jpg",
+      "website" : "http://networkmarketingpro.com"
+    },
+    "Jacek Kościesza" : {
+      "firstName" : "Jacek",
+      "lastName" : "Kościesza"
+    },
+    "Jadwiga Domanowska" : {
+      "firstName" : "Jadwiga",
+      "lastName" : "Domanowska"
+    },
+    "Jordan Adler" : {
+      "firstName" : "Jordan",
+      "lastName" : "Adler",
+      "photo" : "/images/people/jordan-adler.jpg",
+      "website" : "http://www.beachmoney.com"
+    },
+    "Kim Hui" : {
+      "firstName" : "Kim",
+      "lastName" : "Hui"
+    },
+    "Michał Kościński" : {
+      "firstName" : "Michał",
+      "lastName" : "Kościński"
+    },
+    "Mike Dillard" : {
+      "firstName" : "Mike",
+      "lastName" : "Dillard",
+      "website" : "http://MikeDillard.com"
+    },
+    "Monika Kościńska" : {
+      "firstName" : "Monika",
+      "lastName" : "Kościńska"
+    },
+    "Paweł Lenar" : {
+      "firstName" : "Paweł",
+      "lastName" : "Lenar",
+      "website" : "http://PawelLenar.pl"
+    },
+    "Randy Gage" : {
+      "firstName" : "Randy",
+      "lastName" : "Gage",
+      "photo" : "/images/people/randy-gage.png",
+      "website" : "http://www.RandyGage.com"
+    },
+    "Tadeusz Domanowski" : {
+      "firstName" : "Tadeusz",
+      "lastName" : "Domanowski"
+    },
+    "Todd Falcone" : {
+      "firstName" : "Todd",
+      "lastName" : "Falcone",
+      "photo" : "/images/people/todd-falcone.jpg",
+      "website" : "http://ToddFalcone.com"
+    }
+  },
+  "quotes" : [ null, {
+    "author" : "Les Brown",
+    "content" : "...the two most important moments in our lifes is the day that we were born and the day that we realized why we were born"
+  }, {
+    "author" : "Warren Buffett",
+    "content" : "Even if you are very talented and make all possible efforts some results simply need time; you will not get a baby in a month, even if you make pregnant 9 women."
+  }, {
+    "author" : "Johann Wolfgang von Goethe",
+    "content" : "Everything is hard before it becomes easy.",
+    "translations" : {
+      "pl" : {
+        "author" : "Johann Wolfgang von Goethe",
+        "content" : "Wszystko jest trudne zanim stanie się proste."
+      }
+    }
+  }, {
+    "author" : "Brian Tracy",
+    "content" : "Whatever you believe with feeling becomes your reality."
+  }, {
+    "author" : "Jim Rohn",
+    "content" : "Success is not to be pursued; it is to be attracted by the person you become."
+  }, {
+    "author" : "Napoleon Hill",
+    "content" : "Don’t wait! The time will never be just right!"
+  }, {
+    "author" : "Brian Tracy",
+    "content" : "Move out of your comport zone. You can only grow if you are willing to feel akward and uncomfortable when you try something new."
+  }, {
+    "author" : "Robert Kiyosaki",
+    "content" : "The Network Marketing industry offers a ready-made business system to anyone wanting to take control of their financial future."
+  }, {
+    "author" : "Napoleon Hill",
+    "content" : "Do not expect troubles as they have a tendency not to dissapoint."
+  }, {
+    "author" : "Walt Disney",
+    "content" : "The only way to get started is to quit talking and begin doing."
+  } ],
+  "wiki" : {
+    "Passive_income" : {
+      "article" : "todo",
+      "slug" : "Passive_income",
+      "title" : "Passive income",
+      "translations" : {
+        "pl" : {
+          "article" : "do zrobienia",
+          "slug" : "Dochód_pasywny",
+          "title" : "Dochód pasywny"
+        }
+      }
+    }
+  }
+}

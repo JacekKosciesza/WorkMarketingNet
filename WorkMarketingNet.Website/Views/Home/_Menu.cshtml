@@ -1,25 +1,65 @@
-﻿<paper-header-panel drawer mode="seam">
+﻿@inject WorkMarketingNet.Localization.Core.ILocalizationService Localization
+
+@functions{
+	string T(string text, params object[] args) { return Localization.Translate(text, args); }
+}
+
+<paper-header-panel drawer mode="seam">
 
 	<!-- Drawer Toolbar -->
 	<paper-toolbar id="drawerToolbar">
-		<span class="paper-font-title">Menu</span>
+		<span class="paper-font-title">@T("Menu")</span>
 	</paper-toolbar>
 
 	<!-- Drawer Content -->
 	<paper-menu class="list" attr-for-selected="data-route" selected="{{route}}" on-iron-select="onMenuSelect">
 		<a data-route="home" href="/">
 			<iron-icon icon="home"></iron-icon>
-			<span>Home</span>
+			<span>@T("Dashboard")</span>
+		</a>
+		<a data-route="companies" href="/companies">
+			<iron-icon icon="communication:business"></iron-icon>
+			<span>@T("Companies")</span>
+		</a>
+		<a data-route="people" href="/people">
+			<iron-icon icon="social:people"></iron-icon>
+			<span>@T("People")</span>
+		</a>
+		<a data-route="books" href="/books">
+			<iron-icon icon="av:library-books"></iron-icon>
+			<span>@T("Books")</span>
+		</a>
+		<a data-route="videos" href="/videos">
+			<iron-icon icon="av:video-library"></iron-icon>
+			<span>@T("Videos")</span>
+		</a>
+		<a data-route="events" href="/events">
+			<iron-icon icon="event"></iron-icon>
+			<span>@T("Events")</span>
+		</a>
+		<a data-route="quotes" href="/quotes">
+			<iron-icon icon="editor:format-quote"></iron-icon>
+			<span>@T("Quotes")</span>
+		</a>
+		<a data-route="wiki" href="/wiki">
+			<iron-icon icon="communication:live-help"></iron-icon>
+			<span>@T("Wiki")</span>
 		</a>
 
-		<a data-route="users" href="/users">
-			<iron-icon icon="info"></iron-icon>
-			<span>Users</span>
-		</a>
+		@*---*@
 
 		<a data-route="contact" href="/contact">
-			<iron-icon icon="mail"></iron-icon>
-			<span>Contact</span>
+			<iron-icon icon="perm-contact-calendar"></iron-icon>
+			<span>@T("Contacts")</span>
 		</a>
+		<a data-route="users" href="/users">
+			<iron-icon icon="social:people-outline"></iron-icon>
+			<span>@T("Users")</span>
+		</a>
+		<a data-route="website" href="/website">
+			<iron-icon icon="av:web"></iron-icon>
+			<span>@T("Website")</span>
+		</a>
+
 	</paper-menu>
 </paper-header-panel>

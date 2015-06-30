@@ -1,0 +1,20 @@
+﻿<link rel="import" href="/bower_components/firebase-element/firebase-collection.html">
+<link rel="import" href="/elements/wmn-person/wmn-person.html">
+
+<dom-module id="wmn-people">
+	<!--<link rel="import" type="css" href="wmn-people.css">-->
+	<template>
+		<firebase-collection data="{{data}}" location="https://fiery-fire-4147.firebaseio.com/people"></firebase-collection>
+		<template is="dom-repeat" items="{{data}}">
+			<wmn-person>
+				<h1><span>{{item.firstName}}</span> <span>{{item.lastName}}</span></h1>
+				<iron-image style="width:400px; height:400px;" sizing="contain" src="{{item.photo}}"></iron-image>
+			</wmn-person>
+		</template>
+	</template>
+	<script>
+    Polymer({
+    	is: 'wmn-people'
+    });
+	</script>
+</dom-module>

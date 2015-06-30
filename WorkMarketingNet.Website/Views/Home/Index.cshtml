@@ -21,9 +21,20 @@
 			<div class="content">
 				<iron-pages attr-for-selected="data-route" selected="{{route}}">
 					@Html.Partial("_Home")
+					@Html.Partial("_Companies")
+					@Html.Partial("_Company")
+					@Html.Partial("_People")					
+					@Html.Partial("_Books")
+					@Html.Partial("_Videos")
+					@Html.Partial("_Events")
+					@Html.Partial("_Quotes")
+					@Html.Partial("_Wiki")
+					@Html.Partial("_WikiArticle")
+
+					@Html.Partial("_Contact")
 					@Html.Partial("_Users")
 					@Html.Partial("_UserInfo")
-					@Html.Partial("_Contact")
+					@Html.Partial("_Website")
 				</iron-pages>
 			</div>
 		</paper-header-panel>

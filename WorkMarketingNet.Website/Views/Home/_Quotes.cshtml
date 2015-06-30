@@ -4,9 +4,7 @@
 	string T(string text, params object[] args) { return Localization.Translate(text, args); }
 }
 
-<section data-route="contact">
-	<paper-material elevation="1">
-		<h2 class="paper-font-display2">Contact</h2>
-		<p>This is the contact section</p>
-	</paper-material>
+<section data-route="quotes">
+	<h2 class="paper-font-display2">@T("Quotes")</h2>
+	<wmn-quotes-collection></wmn-quotes-collection>
 </section>

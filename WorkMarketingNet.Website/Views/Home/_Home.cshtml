@@ -1,4 +1,10 @@
-﻿<section data-route="home">
+﻿@inject WorkMarketingNet.Localization.Core.ILocalizationService Localization
+
+@functions{
+	string T(string text, params object[] args) { return Localization.Translate(text, args); }
+}
+
+<section data-route="home">
 	<paper-material elevation="1">
 		<my-greeting></my-greeting>
 

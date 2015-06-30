@@ -1,0 +1,22 @@
+﻿<link rel="import" href="/bower_components/firebase-element/firebase-collection.html">
+
+<dom-module id="wmn-quotes-collection">
+	<link rel="stylesheet" type="css" href="wmn-quotes-collection.css">
+	<template>
+		<firebase-collection data="{{data}}" location="https://fiery-fire-4147.firebaseio.com/quotes"></firebase-collection>
+		<template is="dom-repeat" items="{{data}}">
+			<paper-material elevation="1">
+				<blockquote>
+					<span>{{item.content}}</span>
+					<small>{{item.author}}</small>
+				</blockquote>
+			</paper-material>
+		</template>
+		<paper-fab icon="add" style="float: right;"></paper-fab>
+	</template>
+	<script>
+		Polymer({
+			is: 'wmn-quotes-collection'
+		});
+	</script>
+</dom-module>

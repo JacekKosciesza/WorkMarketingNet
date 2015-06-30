@@ -23,6 +23,7 @@ namespace WorkMarketingNet.Localization.Data
 			{Tuple.Create("Events", "pl-PL"), "Wydarzenia"},
 			{Tuple.Create("Users", "pl-PL"), "Użytkownicy"},
 			{Tuple.Create("Quotes", "pl-PL"), "Cytaty"},
+			{Tuple.Create("People", "pl-PL"), "Ludzie"},
 
 			{Tuple.Create("Settings", "pl-PL"), "Ustawienia"},
 		};
