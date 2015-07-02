@@ -1,0 +1,26 @@
+﻿<link rel="import" href="/bower_components/firebase-element/firebase-collection.html">
+
+<dom-module id="wmn-videos-playlist">
+	<link rel="stylesheet" type="css" href="wmn-videos-playlist.css">
+	<template>
+		<firebase-collection data="{{data}}" location="https://fiery-fire-4147.firebaseio.com/videos"></firebase-collection>
+		<template is="dom-repeat" items="{{data}}">
+			<paper-material elevation="1">
+				<h1><a href="{{url(item.videoId)}}">{{item.title}}</a></h1>
+				<iron-image style="width: 150px; height: 150px;" sizing="contain" src="{{imageUrl(item.videoId)}}"></iron-image>				
+</paper-material>
+		</template>
+		<paper-fab icon="add" style="float: right;"></paper-fab>
+	</template>
+	<script>
+		Polymer({
+			is: 'wmn-videos-playlist',
+			url(slug) {
+				return "/videos/" + slug;
+			},
+			imageUrl(slug) {
+				return "http://img.youtube.com/vi/" + slug + "/hqdefault.jpg";
+			}
+		});
+	</script>
+</dom-module>

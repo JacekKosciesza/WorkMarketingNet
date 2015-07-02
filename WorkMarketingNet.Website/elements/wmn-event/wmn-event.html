@@ -1,0 +1,40 @@
+﻿<link rel="import" href="/bower_components/firebase-element/firebase-document.html">
+
+<dom-module id="wmn-event">
+	<link rel="stylesheet" type="css" href="wmn-event.css">
+	<style>
+		/* CSS rules for your element */
+	</style>
+
+	<template>
+		<!-- local DOM for your element -->
+		<paper-material elevation="1">
+			<firebase-document location="{{location(name)}}"
+							   data="{{event}}"></firebase-document>
+			<!--<content></content>-->
+			<h1>{{event.name}}</h1>
+			<a href="{{event.website}}">{{event.website}}</a>
+		</paper-material>
+	</template>
+
+	<script>
+		// element registration
+		Polymer({
+			is: "wmn-event",
+
+			// add properties and methods on the element's prototype
+
+			properties: {
+				// declare properties for the element's public API
+				name: {
+					type: String,
+					notify: true // ???
+				}
+			},
+			location(name) {
+				return "https://fiery-fire-4147.firebaseio.com/events/" + name;
+			}
+		});
+	</script>
+
+</dom-module>

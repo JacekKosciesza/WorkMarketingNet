@@ -4,7 +4,7 @@
 	string T(string text, params object[] args) { return Localization.Translate(text, args); }
 }
 
-<section data-route="videos">
-	<h2 class="paper-font-display2">Videos</h2>
-	<wmn-videos-playlist></wmn-videos-playlist>
+<section data-route="event-details">
+	<h2 class="paper-font-display2">@T("Event")</h2>
+	<wmn-event name="{{params.name}}"></wmn-event>
 </section>

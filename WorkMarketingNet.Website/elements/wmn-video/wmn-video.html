@@ -1,0 +1,46 @@
+﻿<link rel="import" href="/bower_components/firebase-element/firebase-document.html">
+<link rel="import" href="/bower_components/google-youtube/google-youtube.html">
+
+<dom-module id="wmn-video">
+	<link rel="stylesheet" type="css" href="wmn-video.css">
+	<style>
+		/* CSS rules for your element */
+	</style>
+
+	<template>
+		<!-- local DOM for your element -->
+		<paper-material elevation="1">
+			<firebase-document location="{{location(id)}}"
+							   data="{{video}}"></firebase-document>
+			<h1>{{video.title}}</h1>
+			<google-youtube video-id="{{video.videoId}}"
+							height="270px"
+							width="480px"
+							rel="0"
+							start="5"
+							autoplay="0">
+			</google-youtube>
+		</paper-material>
+	</template>
+
+	<script>
+		// element registration
+		Polymer({
+			is: "wmn-video",
+
+			// add properties and methods on the element's prototype
+
+			properties: {
+				// declare properties for the element's public API
+				id: {
+					type: String,
+					notify: true // ???
+				}
+			},
+			location(videoId) {
+				return "https://fiery-fire-4147.firebaseio.com/videos/" + videoId;
+			}
+		});
+	</script>
+
+</dom-module>

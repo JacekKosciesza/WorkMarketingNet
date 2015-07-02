@@ -40,8 +40,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     	app.route = 'videos';
     });
 
+    page('/videos/:videoId', function (data) {
+    	app.route = 'video-details';
+    	app.params = data.params;
+    });
+
     page('/events', function () {
     	app.route = 'events';
+    });
+
+    page('/events/:name', function (data) {
+    	app.route = 'event-details';
+    	app.params = data.params;
     });
 
     page('/quotes', function () {
