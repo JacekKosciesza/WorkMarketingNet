@@ -1,0 +1,33 @@
+<link rel="import" href="/bower_components/firebase-element/firebase-auth.html">
+
+<dom-module id="wmn-signin">
+	<link rel="stylesheet" type="css" href="wmn-signin.css">
+	<style>
+		/* CSS rules for your element */
+	</style>
+
+	<template>
+		<!-- local DOM for your element -->
+		<paper-material elevation="1">
+			<content></content>
+		</paper-material>
+	</template>
+
+	<script>
+    // element registration
+    Polymer({
+    	is: "wmn-signin",
+
+      // add properties and methods on the element's prototype
+
+      properties: {
+        // declare properties for the element's public API
+        greeting: {
+          type: String,
+          value: "Hello!"
+        }
+      }
+    });
+	</script>
+
+</dom-module>

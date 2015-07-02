@@ -22,22 +22,6 @@
     }
   },
   "companies" : {
-    "jm-ocean-avenue" : {
-      "logo" : "/images/companies/jm-ocean-avenue-logo.png",
-      "name" : "JM Ocean Avenue",
-      "slug" : "jm-ocean-avenue",
-      "website" : "http://jmoceanavenue.com"
-    },
-    "xango" : {
-      "logo" : {
-        "default" : "/images/companies/xango-logo.png",
-        "logomark" : "/images/companies/xango-logomark.png",
-        "logotype" : "/images/companies/xango-logotype.png"
-      },
-      "name" : "XANGO",
-      "slug" : "xango",
-      "website" : "http://www.xango.com"
-    },
     "agel" : {
       "logo" : {
         "default" : "/images/companies/agel-logo.png"
@@ -45,6 +29,14 @@
       "name" : "Agel",
       "slug" : "agel",
       "website" : "https://www.agel.com"
+    },
+    "akuna" : {
+      "logo" : {
+        "default" : "/images/companies/akuna-logo.png"
+      },
+      "name" : "Akuna",
+      "slug" : "akuna",
+      "website" : "https://www.akuna.net"
     },
     "arbonne " : {
       "logo" : {
@@ -67,11 +59,33 @@
       },
       "website" : "http://jeunesseglobal.com"
     },
+    "jm-ocean-avenue" : {
+      "logo" : "/images/companies/jm-ocean-avenue-logo.png",
+      "name" : "JM Ocean Avenue",
+      "slug" : "jm-ocean-avenue",
+      "website" : "http://jmoceanavenue.com"
+    },
     "monavie" : {
       "logo" : "/images/companies/monavie-logo.png",
       "name" : "MonaVie",
       "slug" : "monavie",
       "website" : "http://www.monavie.com"
+    },
+    "nu-skin" : {
+      "logo" : {
+        "default" : "/images/companies/nu-ski-logo.png"
+      },
+      "name" : "Nu Skin",
+      "slug" : "nu-skin",
+      "website" : "Nu Skin"
+    },
+    "send-out-cards" : {
+      "logo" : {
+        "default" : "/images/companies/send-out-cards-logo.png"
+      },
+      "name" : "Send Out Cards",
+      "slug" : "send-out-cards",
+      "website" : "https://www.sendoutcards.com"
     },
     "usana" : {
       "logo" : {
@@ -82,11 +96,27 @@
       "name" : "USANA",
       "slug" : "usana",
       "website" : "https://www.usana.com"
+    },
+    "xango" : {
+      "logo" : {
+        "default" : "/images/companies/xango-logo.png",
+        "logomark" : "/images/companies/xango-logomark.png",
+        "logotype" : "/images/companies/xango-logotype.png"
+      },
+      "name" : "XANGO",
+      "slug" : "xango",
+      "website" : "http://www.xango.com"
     }
   },
   "dictionary" : {
     "pl" : {
       "People" : "Ludzie"
+    }
+  },
+  "events" : {
+    "webinar-szkoleniowy-jeunesse-2015-07-11T19:00:00Z" : {
+      "name" : "Webinar szkoleniowy Jeunesse",
+      "slug" : "webinar-szkoleniowy-jeunesse-2015-07-11T19:00:00Z"
     }
   },
   "people" : {
@@ -194,6 +224,12 @@
     "author" : "Walt Disney",
     "content" : "The only way to get started is to quit talking and begin doing."
   } ],
+  "videos" : {
+    "LQtY2Ik9f3k" : {
+      "title" : "Instantly Ageless™ - Prezentacja na żywo",
+      "videoId" : "LQtY2Ik9f3k"
+    }
+  },
   "wiki" : {
     "Compensation_plan" : {
       "slug" : "Compensation_plan",

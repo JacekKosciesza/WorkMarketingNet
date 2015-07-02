@@ -1,0 +1,44 @@
+<link rel="import" href="/bower_components/firebase-element/firebase-auth.html">
+
+<dom-module id="wmn-signup">
+	<link rel="stylesheet" type="css" href="wmn-signup.css">
+	<style>
+		/* CSS rules for your element */
+	</style>
+
+	<template>
+		<!-- local DOM for your element -->
+		<paper-material elevation="1">
+			<firebase-auth id="firebase-auth" location="https://fiery-fire-4147.firebaseio.com" ref="{{auth}}" user="{{user}}"></firebase-auth>
+			<paper-input label="email" type="email" value={{email}}></paper-input>
+			<paper-input label="password" type="password" value="{{password}}"></paper-input>
+			<paper-button raised on-click="signup">Sign up</paper-button>
+		</paper-material>
+	</template>
+
+	<script>
+		// element registration
+		Polymer({
+			is: "wmn-signup",
+
+			// add properties and methods on the element's prototype
+			signup: function () {
+				console.log('Firebase createUser(' + this.email + ', ' + this.password + ')');
+				//this.auth.createUser({ email: this.email, password: this.password }, function (error, userData) {
+				//	if (error) {
+				//		console.log("Error creating user:", error);
+				//	} else {
+				//		console.log("Successfully created user account with uid:", userData.uid);
+				//	}
+				//});
+				var firebaseAuth = document.querySelector('#firebase-auth');
+				firebaseAuth.createUser(this.email, this.password);				
+			},
+			
+			properties: {
+				// declare properties for the element's public API
+			}
+		});
+	</script>
+
+</dom-module>

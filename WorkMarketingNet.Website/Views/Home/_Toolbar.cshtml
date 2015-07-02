@@ -10,8 +10,11 @@
 	<span class="flex"></span>
 
 	<!-- Toolbar icons -->
-	<paper-icon-button icon="refresh"></paper-icon-button>
-	<paper-icon-button icon="search"></paper-icon-button>
+	<paper-button id="login-button">@T("Login")</paper-button>
+	<paper-button raised id="signup-button" on-click="signupButtonClicked" link="/signup">@T("Sign up")</paper-button>
+
+	@*<paper-icon-button icon="refresh"></paper-icon-button>
+	<paper-icon-button icon="search"></paper-icon-button>*@
 
 	<!-- Application name -->
 	<div class="middle paper-font-display2 app-name">@T("WEBSITE_NAME")</div>
