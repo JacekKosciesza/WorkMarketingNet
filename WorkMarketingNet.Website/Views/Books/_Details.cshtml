@@ -1,0 +1,10 @@
+﻿@inject WorkMarketingNet.Localization.Core.ILocalizationService Localization
+
+@functions{
+	string T(string text, params object[] args) { return Localization.Translate(text, args); }
+}
+
+<section data-route="book-details">
+	<h2 class="paper-font-display2">@T("Book")</h2>
+	<wmn-book key="{{params.title}}"></wmn-book> @*params is route (url) parameters*@
+</section>

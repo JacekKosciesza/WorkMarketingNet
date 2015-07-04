@@ -10,8 +10,14 @@
 	<span class="flex"></span>
 
 	<!-- Toolbar icons -->
-	<paper-button id="login-button">@T("Login")</paper-button>
-	<paper-button raised id="signup-button" on-click="signupButtonClicked" link="/signup">@T("Sign up")</paper-button>
+	<paper-icon-button hidden="{{!user}}" icon="social:notifications-none"></paper-icon-button> @*social:notifications-active*@
+	<paper-button hidden="{{!user}}"><iron-icon icon="social:person"></iron-icon>{{user.password.email}}</paper-button>
+	<paper-icon-button hidden="{{!user}}" icon="icons:settings"></paper-icon-button>
+		
+	<paper-button hidden="{{user}}" id="login-button" on-click="signinButtonClicked">@T("Login")</paper-button>
+	<paper-button hidden="{{user}}" raised id="signup-button" on-click="signupButtonClicked" link="/signup">@T("Sign up")</paper-button>
+
+	@*<paper-icon-button icon="icons:arrow-back"></paper-icon-button>*@
 
 	@*<paper-icon-button icon="refresh"></paper-icon-button>
 	<paper-icon-button icon="search"></paper-icon-button>*@
@@ -20,6 +26,6 @@
 	<div class="middle paper-font-display2 app-name">@T("WEBSITE_NAME")</div>
 
 	<!-- Application sub title -->
-	<div class="bottom title"></div>
+	<div class="bottom title">{{subtitle}}</div>
 
 </paper-toolbar>

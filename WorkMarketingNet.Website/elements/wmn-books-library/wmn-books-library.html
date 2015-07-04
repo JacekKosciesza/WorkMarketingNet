@@ -7,17 +7,18 @@
 		<paper-fab icon="add"></paper-fab>
 		<firebase-collection data="{{data}}" location="https://fiery-fire-4147.firebaseio.com/books"></firebase-collection>
 		<template is="dom-repeat" items="{{data}}">
-			<wmn-book>
-				<h1>{{item.title}}</h1>
-				<small>by <a href="people/{{item.author}}">{{item.author}}</a></small>
-				<iron-image style="width: 400px; height: 400px;" sizing="contain" src="{{item.image}}"></iron-image>
-			</wmn-book>
+			<h1><a href="{{url(item.__firebaseKey__)}}">{{item.title}}</a></h1>
+			<small>by <a href="people/{{item.author}}">{{item.author}}</a></small>
+			<iron-image style="width: 400px; height: 400px;" sizing="contain" src="{{item.image}}"></iron-image>
 		</template>
 
 	</template>
 	<script>
-    Polymer({
-    	is: 'wmn-books-library'
-    });
+		Polymer({
+			is: 'wmn-books-library',
+			url(slug) {
+				return "/books/" + slug;
+			},
+		});
 	</script>
 </dom-module>

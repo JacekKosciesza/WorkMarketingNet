@@ -27,6 +27,7 @@
         "default" : "/images/companies/agel-logo.png"
       },
       "name" : "Agel",
+      "order" : 2,
       "slug" : "agel",
       "website" : "https://www.agel.com"
     },
@@ -35,10 +36,11 @@
         "default" : "/images/companies/akuna-logo.png"
       },
       "name" : "Akuna",
+      "order" : 1,
       "slug" : "akuna",
       "website" : "https://www.akuna.net"
     },
-    "arbonne " : {
+    "arbonne" : {
       "logo" : {
         "default" : "/images/companies/arbonne-logo.png"
       },
@@ -120,67 +122,67 @@
     }
   },
   "people" : {
-    "Aleksandra Kościesza" : {
+    "Aleksandra_Kościesza" : {
       "firstName" : "Aleksandra",
       "lastName" : "Kościesza"
     },
-    "Don Failla" : {
+    "Don_Failla" : {
       "firstName" : "Don",
       "lastName" : "Failla"
     },
-    "Eric Worre" : {
+    "Eric_Worre" : {
       "firstName" : "Eric",
       "lastName" : "Worre",
       "photo" : "/images/people/eric-worre.jpg",
       "website" : "http://networkmarketingpro.com"
     },
-    "Jacek Kościesza" : {
+    "Jacek_Kościesza" : {
       "firstName" : "Jacek",
       "lastName" : "Kościesza"
     },
-    "Jadwiga Domanowska" : {
+    "Jadwiga_Domanowska" : {
       "firstName" : "Jadwiga",
       "lastName" : "Domanowska"
     },
-    "Jordan Adler" : {
+    "Jordan_Adler" : {
       "firstName" : "Jordan",
       "lastName" : "Adler",
       "photo" : "/images/people/jordan-adler.jpg",
       "website" : "http://www.beachmoney.com"
     },
-    "Kim Hui" : {
+    "Kim_Hui" : {
       "firstName" : "Kim",
       "lastName" : "Hui"
     },
-    "Michał Kościński" : {
+    "Michał_Kościński" : {
       "firstName" : "Michał",
       "lastName" : "Kościński"
     },
-    "Mike Dillard" : {
+    "Mike_Dillard" : {
       "firstName" : "Mike",
       "lastName" : "Dillard",
       "website" : "http://MikeDillard.com"
     },
-    "Monika Kościńska" : {
+    "Monika_Kościńska" : {
       "firstName" : "Monika",
       "lastName" : "Kościńska"
     },
-    "Paweł Lenar" : {
+    "Paweł_Lenar" : {
       "firstName" : "Paweł",
       "lastName" : "Lenar",
       "website" : "http://PawelLenar.pl"
     },
-    "Randy Gage" : {
+    "Randy_Gage" : {
       "firstName" : "Randy",
       "lastName" : "Gage",
       "photo" : "/images/people/randy-gage.png",
       "website" : "http://www.RandyGage.com"
     },
-    "Tadeusz Domanowski" : {
+    "Tadeusz_Domanowski" : {
       "firstName" : "Tadeusz",
       "lastName" : "Domanowski"
     },
-    "Todd Falcone" : {
+    "Todd_Falcone" : {
       "firstName" : "Todd",
       "lastName" : "Falcone",
       "photo" : "/images/people/todd-falcone.jpg",
@@ -224,6 +226,11 @@
     "author" : "Walt Disney",
     "content" : "The only way to get started is to quit talking and begin doing."
   } ],
+  "users" : {
+    "JacekKosciesza" : {
+      "email" : "jacek.kosciesza@gmail.com"
+    }
+  },
   "videos" : {
     "LQtY2Ik9f3k" : {
       "title" : "Instantly Ageless™ - Prezentacja na żywo",
@@ -234,6 +241,18 @@
     "Compensation_plan" : {
       "slug" : "Compensation_plan",
       "title" : "Compansation plan"
+    },
+    "Financial_rewards_plan" : {
+      "title" : "Financial_rewards_plan"
+    },
+    "Full-time_business" : {
+      "title" : "Full-time_business"
+    },
+    "Opportunity" : {
+      "title" : "Opportunity"
+    },
+    "Part-time income" : {
+      "title" : "Part-time income"
     },
     "Passive_income" : {
       "article" : "todo",
@@ -246,6 +265,18 @@
           "title" : "Dochód pasywny"
         }
       }
+    },
+    "Product" : {
+      "title" : "Product"
+    },
+    "Sales organization" : {
+      "title" : "Sales organization"
+    },
+    "Sponsor" : {
+      "title" : "Sponsor"
+    },
+    "Upline" : {
+      "title" : "Upline"
     }
   }
 }

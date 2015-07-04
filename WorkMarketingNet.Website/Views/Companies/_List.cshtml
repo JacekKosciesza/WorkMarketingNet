@@ -1,0 +1,10 @@
+﻿@inject WorkMarketingNet.Localization.Core.ILocalizationService Localization
+
+@functions{
+	string T(string text, params object[] args) { return Localization.Translate(text, args); }
+}
+
+<section data-route="companies">
+	<h2 class="paper-font-display2">@T("Companies")</h2>
+	<wmn-companies-list></wmn-companies-list> @*limit-to-first="1"*@
+</section>

@@ -6,15 +6,16 @@
 	<template>
 		<firebase-collection data="{{data}}" location="https://fiery-fire-4147.firebaseio.com/people"></firebase-collection>
 		<template is="dom-repeat" items="{{data}}">
-			<wmn-person>
-				<h1><span>{{item.firstName}}</span> <span>{{item.lastName}}</span></h1>
-				<iron-image style="width:400px; height:400px;" sizing="contain" src="{{item.photo}}"></iron-image>
-			</wmn-person>
+			<h1><a href="{{url(item.__firebaseKey__)}}"><span>{{item.firstName}}</span> <span>{{item.lastName}}</span></a></h1>
+			<iron-image style="width:400px; height:400px;" sizing="contain" src="{{item.photo}}"></iron-image>
 		</template>
 	</template>
 	<script>
-    Polymer({
-    	is: 'wmn-people'
-    });
+		Polymer({
+			is: 'wmn-people',
+			url(slug) {
+				return "/people/" + slug;
+			},
+		});
 	</script>
 </dom-module>

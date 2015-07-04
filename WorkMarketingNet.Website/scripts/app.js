@@ -42,4 +42,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 		page('/signup')
 		e.preventDefault()
 	}
+
+	app.signinButtonClicked = function (e) {
+		page('/signin')
+		e.preventDefault()
+	}
 })(document);

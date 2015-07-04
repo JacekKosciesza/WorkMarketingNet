@@ -1,4 +1,6 @@
-﻿<dom-module id="wmn-book">
+﻿<link rel="import" href="/bower_components/firebase-element/firebase-document.html">
+
+<dom-module id="wmn-book">
 	<link rel="stylesheet" type="css" href="wmn-book.css">
 	<style>
 		/* CSS rules for your element */
@@ -7,7 +9,12 @@
 	<template>
 		<!-- local DOM for your element -->
 		<paper-material elevation="1">
-			<content></content>
+			<firebase-document location="{{location(key)}}"
+							   data="{{book}}"></firebase-document>
+			<!--<content></content>-->
+			<h1>{{book.title}}</h1>
+			<!--<span>{{location(key)}}</span>-->
+			<paper-fab icon="image:edit" style="float: right;"></paper-fab>
 		</paper-material>
 	</template>
 
@@ -17,13 +24,16 @@
     	is: "wmn-book",
 
       // add properties and methods on the element's prototype
+    	location(title) {
+    		return "https://fiery-fire-4147.firebaseio.com/books/" + title;
+    	},
 
       properties: {
         // declare properties for the element's public API
-        greeting: {
-          type: String,
-          value: "Hello!"
-        }
+      	key: {
+      		type: String,
+      		notify: true // ???
+      	},
       }
     });
 	</script>

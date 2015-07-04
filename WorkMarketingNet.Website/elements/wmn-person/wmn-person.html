@@ -1,4 +1,6 @@
-﻿<dom-module id="wmn-person">
+﻿<link rel="import" href="/bower_components/firebase-element/firebase-document.html">
+
+<dom-module id="wmn-person">
 	<!--<link rel="import" type="css" href="wmn-person.css">-->
 	<style>
 		/* CSS rules for your element */
@@ -7,7 +9,11 @@
 	<template>
 		<!-- local DOM for your element -->
 		<paper-material elevation="1">
-			<content></content>
+			<firebase-document location="{{location(name)}}"
+							   data="{{person}}"></firebase-document>
+			<!--<content></content>-->
+			<h1>{{person.firstName}}</h1>
+			<paper-fab icon="image:edit" style="float: right;"></paper-fab>
 		</paper-material>
 	</template>
 
@@ -17,9 +23,16 @@
     	is: "wmn-person",
 
       // add properties and methods on the element's prototype
+    location(name) {
+    	return "https://fiery-fire-4147.firebaseio.com/people/" + name;
+    },
 
       properties: {
-        // declare properties for the element's public API
+      	// declare properties for the element's public API
+      	name: {
+      		type: String,
+      		notify: true // ???
+      	}
       }
     });
 	</script>

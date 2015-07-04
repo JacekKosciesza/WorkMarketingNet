@@ -13,31 +13,35 @@
 
 	<paper-drawer-panel id="paperDrawerPanel">
 		@Html.Partial("_Menu")
+		@Html.Partial("~/Views/Companies/_Menu")
 		<paper-header-panel main mode="waterfall-tall">
-
+			@Html
 			@Html.Partial("_Toolbar")
 
 			<!-- Main Content -->
 			<div class="content">
 				<iron-pages attr-for-selected="data-route" selected="{{route}}">
 					@Html.Partial("_Home")
-					@Html.Partial("_Companies")
-					@Html.Partial("_Company")
-					@Html.Partial("_People")					
-					@Html.Partial("_Books")
-					@Html.Partial("_Videos")
-					@Html.Partial("_Video")
-					@Html.Partial("_Events")
-					@Html.Partial("_Event")
-					@Html.Partial("_Quotes")
-					@Html.Partial("_Wiki")
-					@Html.Partial("_WikiArticle")
-
-					@Html.Partial("_Signup")
-					@Html.Partial("_Contact")
-					@Html.Partial("_Users")
-					@Html.Partial("_UserInfo")
-					@Html.Partial("_Website")
+					@Html.Partial("~/Views/Companies/_List")
+					@Html.Partial("~/Views/Companies/_Details")
+					@Html.Partial("~/Views/Companies/_Products")
+                    @Html.Partial("~/Views/People/_List")
+					@Html.Partial("~/Views/People/_Details")
+                    @Html.Partial("~/Views/Books/_List")
+                    @Html.Partial("~/Views/Books/_Details")
+                    @Html.Partial("~/Views/Videos/_List")
+                    @Html.Partial("~/Views/Videos/_Details")
+                    @Html.Partial("~/Views/Events/_List")
+                    @Html.Partial("~/Views/Events/_Details")
+                    @Html.Partial("~/Views/Quotes/_List")
+                    @Html.Partial("~/Views/Wiki/_List")
+                    @Html.Partial("~/Views/Wiki/_Details")
+					@Html.Partial("~/Views/Account/_Signup")
+                    @Html.Partial("~/Views/Account/_Signin")
+                    @Html.Partial("_Contact")
+                    @Html.Partial("~/Views/Users/_List")
+                    @Html.Partial("~/Views/Users/_Details")
+                    @Html.Partial("_Website")
 				</iron-pages>
 			</div>
 		</paper-header-panel>

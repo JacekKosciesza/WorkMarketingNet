@@ -16,24 +16,45 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     // client-side router inspired by the Express router
     // More info: https://visionmedia.github.io/page.js/
     page('/', function () {
-      app.route = 'home';
+    	app.route = 'home';
+    	app.mainMenu = true;
     });
 
     page('/companies', function () {
     	app.route = 'companies';
+    	app.mainMenu = true;
     });
 
     page('/companies/:name', function (data) {
     	app.route = 'company-details';
     	app.params = data.params;
+    	app.mainMenu = false;
+    	app.companyMenu = true;
+    });
+
+    page('/companies/:name/products', function (data) {
+    	app.route = 'company-products';
+    	app.params = data.params;
+    	app.mainMenu = false;
+    	app.companyMenu = true;
     });
 
     page('/people', function () {
     	app.route = 'people';
     });
 
+    page('/people/:name', function (data) {
+    	app.route = 'person-details';
+    	app.params = data.params;
+    });
+
     page('/books', function () {
     	app.route = 'books';
+    });
+
+    page('/books/:title', function (data) {
+    	app.route = 'book-details';
+    	app.params = data.params;
     });
 
     page('/videos', function () {
@@ -71,6 +92,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     page('/signup', function () {
     	app.route = 'signup';
+    });
+
+    page('/signin', function () {
+    	app.route = 'signin';
     });
 
     page('/contact', function () {

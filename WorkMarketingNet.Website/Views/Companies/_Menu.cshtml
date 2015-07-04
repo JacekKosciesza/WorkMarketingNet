@@ -1,0 +1,44 @@
+﻿@inject WorkMarketingNet.Localization.Core.ILocalizationService Localization
+
+@functions{
+	string T(string text, params object[] args) { return Localization.Translate(text, args); }
+}
+
+<paper-header-panel drawer mode="seam" hidden="{{!companyMenu}}">
+
+	<!-- Drawer Toolbar -->
+	<paper-toolbar id="drawerToolbar">
+		<a data-route="companies" href="/companies" style="color:white;text-decoration:none;">
+			<iron-icon icon="icons:arrow-back"></iron-icon>
+			<span>@T("Companies")</span>
+		</a>
+	</paper-toolbar>
+
+	<!-- Drawer Content -->
+	<paper-menu class="list" attr-for-selected="data-route" selected="{{route}}" on-iron-select="onMenuSelect">
+		<a data-route="company-details" href="/companies/arbonne">
+			<iron-icon icon="icons:description"></iron-icon>
+			<span>@T("Overview")</span>
+		</a>
+		<a data-route="company-products" href="/companies/arbonne/products">
+			<iron-icon icon="icons:shopping-cart"></iron-icon>
+			<span>@T("Products")</span>
+		</a>
+		<a data-route="company-charity" href="/companies/arbonne/charity">
+			<iron-icon icon="icons:language"></iron-icon>
+			<span>@T("Countries")</span>
+		</a>
+		<a data-route="company-charity" href="/companies/arbonne/charity">
+			<iron-icon icon="editor:attach-money"></iron-icon>
+			<span>@T("Plan")</span>
+		</a>
+		<a data-route="company-charity" href="/companies/arbonne/charity">
+			<iron-icon icon="social:group"></iron-icon>
+			<span>@T("Leaders")</span>
+		</a>
+		<a data-route="company-charity" href="/companies/arbonne/charity">
+			<iron-icon icon="icons:favorite"></iron-icon>
+			<span>@T("Charity")</span>
+		</a>
+	</paper-menu>
+</paper-header-panel>
