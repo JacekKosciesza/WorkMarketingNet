@@ -79,6 +79,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     	app.route = 'quotes';
     });
 
+    page('/quotes/:id', function (data) {
+    	app.route = 'quote-details';
+    	app.params = data.params;
+    });
+
     page('/wiki', function () {
     	app.route = 'wiki';
     });
@@ -113,6 +118,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     page('/website', function () {
     	app.route = 'website';
+    });
+
+  	// ---
+
+    page('/contact', function () {
+    	app.route = 'contact';
+    });
+
+    page('/test', function () {
+    	app.route = 'test';
     });
 
     // add #! before urls

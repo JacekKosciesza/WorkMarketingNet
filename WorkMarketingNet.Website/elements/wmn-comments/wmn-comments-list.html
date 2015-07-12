@@ -1,0 +1,35 @@
+﻿<link rel="import" href="/bower_components/firebase-element/firebase-collection.html">
+
+<dom-module id="wmn-comments-list">
+	<link rel="stylesheet" type="css" href="wmn-comments-list.css">
+	<template>
+		<firebase-collection data="{{data}}" location="https://fiery-fire-4147.firebaseio.com/companies"></firebase-collection>
+		<template is="dom-repeat" items="{{data}}">
+			<paper-material elevation="1">
+				<h1><a href="{{url(item.slug)}}">{{item.name}}</a></h1>
+				<!--<span>{{item.__firebaseKey__}}</span>-->
+				<a href="{{item.website}}" rel="nofollow">{{item.website}}</a>
+				<iron-image style="width: 150px; height: 150px;" sizing="contain" src="{{item.logo.logomark}}"></iron-image>
+				<!--http://inkbotdesign.com/logotype-vs-logomark/-->
+			</paper-material>
+		</template>
+		<paper-fab icon="add" style="float: right;"></paper-fab>
+	</template>
+	<script>
+		Polymer({
+			is: 'wmn-comments-list',
+			url(slug) {
+				return "/companies/" + slug;
+			},
+
+			properties: {
+				// declare properties for the element's public API
+				limitToFirst: {
+					type: Number,
+					value: 10,
+					notify: true
+				}
+			}
+		});
+	</script>
+</dom-module>

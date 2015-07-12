@@ -1,0 +1,42 @@
+﻿<link rel="import" href="/bower_components/firebase-element/firebase-document.html">
+
+<dom-module id="wmn-quote">
+	<link rel="stylesheet" type="css" href="wmn-quote.css">
+	<style>
+		/* CSS rules for your element */
+	</style>
+
+	<template>
+		<!-- local DOM for your element -->
+		<paper-material elevation="1">
+			<firebase-document location="{{location(id)}}"
+							   data="{{quote}}"></firebase-document>
+			<blockquote>
+				<span>{{quote.content}}</span>
+				<small>{{quote.author}}</small>
+			</blockquote>
+			<paper-fab icon="image:edit" style="float: right;"></paper-fab>
+		</paper-material>
+	</template>
+
+	<script>
+    // element registration
+    Polymer({
+    	is: "wmn-quote",
+
+      // add properties and methods on the element's prototype
+    	location(id) {
+    		return "https://fiery-fire-4147.firebaseio.com/quotes/" + id;
+    	},
+
+      properties: {
+        // declare properties for the element's public API
+      	id: {
+      		type: Number,
+			notify: true
+      	},
+      }
+    });
+	</script>
+
+</dom-module>
