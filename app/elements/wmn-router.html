@@ -1,0 +1,23 @@
+<dom-module id="wmn-router">
+	<template>
+		<link rel="import" href="{{routes(language)}}">
+	</template>
+	<script>
+		Polymer({
+			is: 'wmn-router',
+			properties: {
+				// declare properties for the element's public API
+				culture: {
+					type: String,
+					value: 'en',
+					notify: true
+				}
+			},
+			routes(culture) {
+				var localizedRoutes = './elements/wmn-routes-' + culture + '.html'; 
+				console.log('Loading routes:' + localizedRoutes);
+				return localizedRoutes;
+			}
+		});
+	</script>
+</dom-module>
