@@ -1,6 +1,6 @@
 <dom-module id="wmn-router">
 	<template>
-		<link rel="import" href="{{routes(language)}}">
+		<link rel="import" href="{{routes(culture)}}">
 	</template>
 	<script>
 		Polymer({
@@ -14,7 +14,7 @@
 				}
 			},
 			routes(culture) {
-				var localizedRoutes = './elements/wmn-routes-' + culture + '.html'; 
+				var localizedRoutes = './elements/wmn-routing/wmn-routes.' + culture + '.html'; 
 				console.log('Loading routes:' + localizedRoutes);
 				return localizedRoutes;
 			}

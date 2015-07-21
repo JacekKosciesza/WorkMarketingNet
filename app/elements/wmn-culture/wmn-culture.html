@@ -8,9 +8,26 @@
 				// declare properties for the element's public API
 				culture: {
 					type: String,
+					reflectToAttribute: true,
 					notify: true
 				}
 			},
+			created: function() {
+		    	console.log(this.localName + '#' + this.id + ' was created');
+		  	},
+			
+		  	attached: function() {
+		    	console.log(this.localName + '#' + this.id + ' was attached');
+				this.culture = 'en';
+		  	},
+			
+		  	detached: function() {
+		    	console.log(this.localName + '#' + this.id + ' was detached');
+		  	},
+			
+		  	attributeChanged: function(name, type) {
+		    	console.log(this.localName + '#' + this.id + ' attribute ' + name + ' was changed to ' + this.getAttribute(name));
+		  	}
 		});
 	</script>
 </dom-module>
