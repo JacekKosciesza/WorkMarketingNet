@@ -1,33 +1,64 @@
-<dom-module id="wmn-culture">
-	<template>
-	</template>
-	<script>
-		Polymer({
-			is: 'wmn-culture',
-			properties: {
-				// declare properties for the element's public API
-				culture: {
-					type: String,
-					reflectToAttribute: true,
-					notify: true
-				}
-			},
-			created: function() {
-		    	console.log(this.localName + '#' + this.id + ' was created');
-		  	},
-			
-		  	attached: function() {
-		    	console.log(this.localName + '#' + this.id + ' was attached');
-				this.culture = 'en';
-		  	},
-			
-		  	detached: function() {
-		    	console.log(this.localName + '#' + this.id + ' was detached');
-		  	},
-			
-		  	attributeChanged: function(name, type) {
-		    	console.log(this.localName + '#' + this.id + ' attribute ' + name + ' was changed to ' + this.getAttribute(name));
-		  	}
-		});
-	</script>
-</dom-module>
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+
+<script>
+	Polymer({
+		is: 'wmn-culture',
+		//extends: 'base-native-html-element',
+		properties: {
+			// declare properties for the element's public API
+			culture: {
+				type: String, // Boolean, Date, Number, String, Array or Object
+				value: 'en', // boolean, number, string or function
+				reflectToAttribute: true,
+				readOnly: false,
+				notify: true, // two-way data binding
+				//computed:
+				observer: '_cultureChanged' 
+			}
+		},
+
+		// static attributes (attributes like class, tabindex, data-* attributes, aria-roles)
+		// hostAttributes: {
+      	// 	class: 'bla',
+      	// 	data-somehting: true
+      	// 	tabindex: 0
+    	//},
+
+		_cultureChanged: function(newValue, oldValue) {
+			console.log('_cultureChanged: was = ' + oldValue + ', is = ' + newValue);
+		},
+
+		// -------
+
+		created: function() {
+	    	console.log(this.localName + '#' + this.id + ' was created');
+	  	},
+		
+		// local DOM initialized (after created, before ready)
+		
+		ready: function() {
+	    	console.log(this.localName + '#' + this.id + ' is ready');
+			this.culture = 'en';
+	  	},
+		
+		factoryImpl: function(culture) {
+			console.log(this.localName + '#' + this.id + ' custom constructor (factoryImpl) was called');
+			this.culture = culture;
+  		},
+		
+	  	attached: function() {
+	    	console.log(this.localName + '#' + this.id + ' was attached');
+			this.async(function() {
+      			// access sibling or parent elements here
+   			});
+	  	},
+			  			
+	  	attributeChanged: function(name, type) {
+	    	console.log(this.localName + '#' + this.id + ' attribute ' + name + ' was changed to ' + this.getAttribute(name));
+	  	},
+		  
+	  	detached: function() {
+	    	console.log(this.localName + '#' + this.id + ' was detached');
+	  	}
+	});
+</script>

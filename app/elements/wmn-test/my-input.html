@@ -1,0 +1,19 @@
+<script>
+	MyInput = Polymer({
+
+  is: 'my-input',
+
+  extends: 'input',
+
+  created: function() {
+    this.style.border = '1px solid red';
+  }
+
+});
+
+var el1 = new MyInput();
+console.log(el1 instanceof HTMLInputElement); // true
+
+var el2 = document.createElement('input', 'my-input');
+console.log(el2 instanceof HTMLInputElement); // true
+</script>
